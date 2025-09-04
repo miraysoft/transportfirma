@@ -77,7 +77,7 @@ const ContactSection = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="h-6 w-6 text-blue-600" />
+                  <Phone className="h-6 w-6 text-red-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Telefon</p>
                     <a href="tel:+41792470005" className="text-blue-600 hover:text-blue-700">
