@@ -33,31 +33,31 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
               Startseite
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
               Dienstleistungen
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
               Über uns
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
               Kontakt
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-red-600 hover:bg-red-700 text-white"
             >
               Anfrage stellen
             </Button>
