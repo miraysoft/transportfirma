@@ -27,7 +27,7 @@ class ContactFormTester:
         # Get URLs from environment
         self.backend_url = os.environ.get('REACT_APP_BACKEND_URL', 'http://localhost:8001')
         self.api_base = f"{self.backend_url}/api"
-        self.contact_endpoint = f"{self.api_base}/contact"
+        self.contact_endpoint = f"{self.api_base}/contact/"
         
         # Database connection
         self.mongo_url = os.environ.get('MONGO_URL', 'mongodb://localhost:27017')
