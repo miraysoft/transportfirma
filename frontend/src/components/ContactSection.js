@@ -111,7 +111,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <Card className="bg-blue-50 border-blue-200">
+            <Card className="bg-red-50 border-red-200">
               <CardHeader>
                 <CardTitle className="text-xl text-blue-900">
                   Frühe Anfragen willkommen!
