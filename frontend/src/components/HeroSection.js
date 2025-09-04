@@ -14,16 +14,22 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-r from-gray-900 to-gray-700 relative">
-          {/* Placeholder for transport video */}
-          <div className="absolute inset-0 bg-black/40"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white/20">
-              <div className="text-6xl mb-4">🚛</div>
-              <p className="text-lg">Transport Video Platzhalter</p>
-              <p className="text-sm mt-2">LKW → Kühlfahrzeug → Flugzeug → Post</p>
-            </div>
-          </div>
+        <div className="w-full h-full relative">
+          {/* Vimeo Video Background */}
+          <iframe
+            src="https://player.vimeo.com/video/872507248?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+            className="absolute inset-0 w-full h-full object-cover"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            style={{
+              width: '100vw',
+              height: '100vh',
+              transform: 'scale(1.1)', // Slightly larger to avoid borders
+              transformOrigin: 'center center'
+            }}
+          ></iframe>
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
       </div>
 
