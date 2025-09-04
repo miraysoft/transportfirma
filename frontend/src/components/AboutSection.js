@@ -10,7 +10,7 @@ const AboutSection = () => {
       description: "Pünktliche und sichere Lieferung ist unser Versprechen"
     },
     {
-      icon: <Users className="h-8 w-8 text-blue-600" />,
+      icon: <Users className="h-8 w-8 text-red-600" />,
       title: "Professionalität",
       description: "Erfahrenes Team mit jahrelanger Branchenexpertise"
     },
