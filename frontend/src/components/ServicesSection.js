@@ -11,7 +11,7 @@ const ServicesSection = () => {
       features: ["Vollladungen", "Teilladungen", "Sondertransporte", "Termintreue Lieferung"]
     },
     {
-      icon: <Snowflake className="h-12 w-12 text-blue-600" />,
+      icon: <Snowflake className="h-12 w-12 text-red-600" />,
       title: "Kühlfahrzeuge",
       description: "Temperaturgeführte Transporte für sensible Güter mit modernster Kühltechnik.",
       features: ["Frischewaren", "Tiefkühlprodukte", "Pharmazeutika", "Temperaturüberwachung"]
