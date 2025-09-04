@@ -23,7 +23,7 @@ const ServicesSection = () => {
       features: ["Express-Lieferung", "Internationale Verbindungen", "Sichere Verpackung", "Tracking"]
     },
     {
-      icon: <Package className="h-12 w-12 text-blue-600" />,
+      icon: <Package className="h-12 w-12 text-red-600" />,
       title: "Postversand",
       description: "Zuverlässige Paket- und Briefzustellung für Privat- und Geschäftskunden.",
       features: ["Briefversand", "Paketdienst", "Express-Optionen", "Nachverfolgung"]
