@@ -81,32 +81,32 @@ const Header = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
               <button
                 onClick={() => scrollToSection("home")}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
+                className="block px-3 py-2 text-gray-700 hover:text-red-600 w-full text-left"
               >
                 Startseite
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
+                className="block px-3 py-2 text-gray-700 hover:text-red-600 w-full text-left"
               >
                 Dienstleistungen
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
+                className="block px-3 py-2 text-gray-700 hover:text-red-600 w-full text-left"
               >
                 Über uns
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
+                className="block px-3 py-2 text-gray-700 hover:text-red-600 w-full text-left"
               >
                 Kontakt
               </button>
               <div className="px-3 py-2">
                 <Button
                   onClick={() => scrollToSection("contact")}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white"
                 >
                   Anfrage stellen
                 </Button>
