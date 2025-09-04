@@ -17,7 +17,7 @@ const ServicesSection = () => {
       features: ["Frischewaren", "Tiefkühlprodukte", "Pharmazeutika", "Temperaturüberwachung"]
     },
     {
-      icon: <Plane className="h-12 w-12 text-blue-600" />,
+      icon: <Plane className="h-12 w-12 text-red-600" />,
       title: "Luftfracht",
       description: "Schnelle und sichere Luftfracht-Services für eilige und hochwertige Sendungen.",
       features: ["Express-Lieferung", "Internationale Verbindungen", "Sichere Verpackung", "Tracking"]
