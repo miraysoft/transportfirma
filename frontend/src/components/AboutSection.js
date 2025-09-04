@@ -73,7 +73,7 @@ const AboutSection = () => {
 
           {/* Stats/Info Cards */}
           <div className="space-y-6">
-            <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+            <Card className="bg-gradient-to-r from-red-50 to-red-100 border-red-200">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Aktueller Status
