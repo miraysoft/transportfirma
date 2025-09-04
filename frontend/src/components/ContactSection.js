@@ -89,7 +89,7 @@ const ContactSection = () => {
                   <Mail className="h-6 w-6 text-red-600" />
                   <div>
                     <p className="font-semibold text-gray-900">E-Mail</p>
-                    <a href="mailto:info@ammanncotransport.ch" className="text-blue-600 hover:text-blue-700">
+                    <a href="mailto:info@ammanncotransport.ch" className="text-red-600 hover:text-red-700">
                       info@ammanncotransport.ch
                     </a>
                   </div>
