@@ -204,7 +204,7 @@ const ContactSection = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:border-red-500"
                   >
                     <option value="">Bitte wählen...</option>
                     <option value="lkw">LKW-Transport</option>
