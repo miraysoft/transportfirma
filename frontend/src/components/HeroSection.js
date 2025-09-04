@@ -44,13 +44,13 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-white">
               <Phone className="h-5 w-5" />
-              <a href="tel:+41792470005" className="hover:text-blue-300 transition-colors">
+              <a href="tel:+41792470005" className="hover:text-red-300 transition-colors">
                 +41 79 247 00 05
               </a>
             </div>
             <div className="flex items-center gap-2 text-white">
               <Mail className="h-5 w-5" />
-              <a href="mailto:info@ammanncotransport.ch" className="hover:text-blue-300 transition-colors">
+              <a href="mailto:info@ammanncotransport.ch" className="hover:text-red-300 transition-colors">
                 info@ammanncotransport.ch
               </a>
             </div>
