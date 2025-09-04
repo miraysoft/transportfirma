@@ -333,7 +333,7 @@ class ContactFormTester:
     def test_get_inquiries_endpoint(self):
         """Test the GET /api/contact endpoint"""
         try:
-            response = requests.get(self.contact_endpoint, timeout=10)
+            response = requests.get(f"{self.contact_endpoint}", timeout=10)
             
             if response.status_code == 200:
                 data = response.json()
