@@ -118,7 +118,7 @@ const ContactSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-blue-800">
+                <p className="text-red-800">
                   Obwohl wir uns noch im Aufbau befinden, nehmen wir gerne bereits 
                   jetzt Ihre Anfragen entgegen. So können wir Sie über unseren 
                   Betriebsstart informieren und Ihre Transportbedürfnisse von 
