@@ -232,7 +232,7 @@ const ContactSection = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white py-3"
                 >
                   Anfrage senden
                 </Button>
