@@ -102,7 +102,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Clock className="h-6 w-6 text-blue-600" />
+                  <Clock className="h-6 w-6 text-red-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Erreichbarkeit</p>
                     <p className="text-gray-600">Mo-Fr: 08:00 - 18:00 Uhr</p>
