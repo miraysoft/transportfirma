@@ -113,7 +113,7 @@ const ContactSection = () => {
 
             <Card className="bg-red-50 border-red-200">
               <CardHeader>
-                <CardTitle className="text-xl text-blue-900">
+                <CardTitle className="text-xl text-red-900">
                   Frühe Anfragen willkommen!
                 </CardTitle>
               </CardHeader>
