@@ -5,6 +5,10 @@ import { Textarea } from "./ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { toast } from "sonner";
+import axios from "axios";
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
