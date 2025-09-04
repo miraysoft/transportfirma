@@ -27,21 +27,32 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock form submission - in real implementation this would call backend API
-    console.log("Form submitted:", formData);
-    toast.success("Vielen Dank für Ihre Anfrage! Wir melden uns bald bei Ihnen.");
     
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      service: "",
-      message: ""
-    });
+    try {
+      const response = await axios.post(`${API}/contact`, formData);
+      
+      if (response.data.success) {
+        toast.success(response.data.message);
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          message: ""
+        });
+      }
+    } catch (error) {
+      console.error("Contact form error:", error);
+      if (error.response?.data?.detail) {
+        toast.error(error.response.data.detail);
+      } else {
+        toast.error("Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.");
+      }
+    }
   };
 
   return (
