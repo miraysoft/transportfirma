@@ -5,7 +5,7 @@ import { Truck, Snowflake, Plane, Package } from "lucide-react";
 const ServicesSection = () => {
   const services = [
     {
-      icon: <Truck className="h-12 w-12 text-blue-600" />,
+      icon: <Truck className="h-12 w-12 text-red-600" />,
       title: "LKW-Transport",
       description: "Professioneller Gütertransport mit modernen LKW-Flotten für nationale und internationale Strecken.",
       features: ["Vollladungen", "Teilladungen", "Sondertransporte", "Termintreue Lieferung"]
