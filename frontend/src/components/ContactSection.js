@@ -80,7 +80,7 @@ const ContactSection = () => {
                   <Phone className="h-6 w-6 text-red-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Telefon</p>
-                    <a href="tel:+41792470005" className="text-blue-600 hover:text-blue-700">
+                    <a href="tel:+41792470005" className="text-red-600 hover:text-red-700">
                       +41 79 247 00 05
                     </a>
                   </div>
