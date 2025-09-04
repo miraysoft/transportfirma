@@ -16,7 +16,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Truck className="h-8 w-8 text-blue-400" />
+              <img 
+              src="https://ammanncotransport.ch/wp-content/uploads/2025/09/96.png" 
+              alt="Ammann & Co Transport Logo" 
+              className="h-8 w-auto"
+            />
               <span className="text-2xl font-bold">Ammann & Co Transport</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
