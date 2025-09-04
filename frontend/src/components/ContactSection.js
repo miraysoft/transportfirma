@@ -95,7 +95,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="h-6 w-6 text-blue-600" />
+                  <MapPin className="h-6 w-6 text-red-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Standort</p>
                     <p className="text-gray-600">Schweiz</p>
