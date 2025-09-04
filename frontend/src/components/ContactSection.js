@@ -86,7 +86,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-6 w-6 text-blue-600" />
+                  <Mail className="h-6 w-6 text-red-600" />
                   <div>
                     <p className="font-semibold text-gray-900">E-Mail</p>
                     <a href="mailto:info@ammanncotransport.ch" className="text-blue-600 hover:text-blue-700">
