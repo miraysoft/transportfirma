@@ -61,7 +61,7 @@ const HeroSection = () => {
             <Button
               onClick={() => scrollToSection("services")}
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg"
             >
               Unsere Dienstleistungen
               <ArrowRight className="ml-2 h-5 w-5" />
