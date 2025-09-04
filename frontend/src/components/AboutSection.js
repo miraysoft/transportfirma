@@ -110,7 +110,7 @@ const AboutSection = () => {
                     <div className="text-sm text-gray-600">LKW Flotte</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">8+</div>
+                    <div className="text-2xl font-bold text-red-600">8+</div>
                     <div className="text-sm text-gray-600">Kühlfahrzeuge</div>
                   </div>
                   <div className="text-center">
