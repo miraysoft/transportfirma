@@ -3,7 +3,7 @@ from typing import List
 import logging
 from datetime import datetime
 
-from ..models import ContactInquiry, ContactInquiryCreate, ContactInquiryResponse
+from models import ContactInquiry, ContactInquiryCreate, ContactInquiryResponse
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 
