@@ -71,7 +71,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-blue-50 rounded-2xl p-8 md:p-12">
+          <div className="bg-red-50 rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Maßgeschneiderte Lösungen
             </h3>
