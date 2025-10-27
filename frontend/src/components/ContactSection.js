@@ -232,9 +232,9 @@ const ContactSection = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="phone" className="block text-sm font-bold text-gray-700 tracking-wide">
                       Telefon
                     </label>
                     <Input
@@ -244,10 +244,11 @@ const ContactSection = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="+41 XX XXX XX XX"
+                      className="h-12 border-2 border-gray-200 focus:border-red-500 focus:ring-red-500 rounded-xl text-lg"
                     />
                   </div>
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                  <div className="space-y-2">
+                    <label htmlFor="company" className="block text-sm font-bold text-gray-700 tracking-wide">
                       Unternehmen
                     </label>
                     <Input
@@ -257,6 +258,7 @@ const ContactSection = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Ihr Unternehmen"
+                      className="h-12 border-2 border-gray-200 focus:border-red-500 focus:ring-red-500 rounded-xl text-lg"
                     />
                   </div>
                 </div>
