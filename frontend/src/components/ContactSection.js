@@ -198,10 +198,10 @@ const ContactSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="block text-sm font-bold text-gray-700 tracking-wide">
                       Name *
                     </label>
                     <Input
@@ -212,10 +212,11 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="Ihr vollständiger Name"
+                      className="h-12 border-2 border-gray-200 focus:border-red-500 focus:ring-red-500 rounded-xl text-lg"
                     />
                   </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="block text-sm font-bold text-gray-700 tracking-wide">
                       E-Mail *
                     </label>
                     <Input
@@ -226,6 +227,7 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="ihre.email@beispiel.ch"
+                      className="h-12 border-2 border-gray-200 focus:border-red-500 focus:ring-red-500 rounded-xl text-lg"
                     />
                   </div>
                 </div>
