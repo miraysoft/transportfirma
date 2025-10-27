@@ -83,14 +83,26 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Kontakt aufnehmen
+    <section id="contact" className="py-32 gradient-professional relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-red-200 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-red-100 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+        <div className={`text-center mb-20 transition-all duration-1000 ${
+          isVisible ? 'animate-fade-in' : 'opacity-0 translate-y-10'
+        }`}>
+          <div className="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <MessageCircle className="h-4 w-4" />
+            Jetzt Kontakt aufnehmen
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-gray-900 mb-6 tracking-tight">
+            Kontakt <span className="bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">aufnehmen</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Haben Sie Fragen oder möchten Sie mehr über unsere zukünftigen Services erfahren? 
+          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+            Haben Sie Fragen oder möchten Sie mehr über unsere <span className="font-semibold text-gray-800">zukünftigen Services</span> erfahren? 
             Wir freuen uns auf Ihre Nachricht!
           </p>
         </div>
