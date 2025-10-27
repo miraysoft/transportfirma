@@ -107,46 +107,60 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className={`space-y-8 transition-all duration-1000 ${
+            isVisible ? 'animate-slide-up' : 'opacity-0 translate-y-10'
+          }`}>
+            <div className="bg-white/70 backdrop-blur-xl rounded-3xl p-8 shadow-professional border border-white/50">
+              <h3 className="text-3xl font-bold font-display text-gray-900 mb-8 tracking-tight">
                 Kontaktinformationen
               </h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-6 w-6 text-red-600" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Telefon</p>
-                    <a href="tel:+41792470005" className="text-red-600 hover:text-red-700">
-                      +41 79 247 00 05
-                    </a>
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: <Phone className="h-7 w-7 text-red-600" />,
+                    title: "Telefon",
+                    content: "+41 79 247 00 05",
+                    href: "tel:+41792470005",
+                    gradient: "from-red-50 to-red-100"
+                  },
+                  {
+                    icon: <Mail className="h-7 w-7 text-red-600" />,
+                    title: "E-Mail",
+                    content: "info@ammanncotransport.ch",
+                    href: "mailto:info@ammanncotransport.ch",
+                    gradient: "from-blue-50 to-blue-100"
+                  },
+                  {
+                    icon: <MapPin className="h-7 w-7 text-red-600" />,
+                    title: "Standort",
+                    content: "Schweiz",
+                    gradient: "from-green-50 to-green-100"
+                  },
+                  {
+                    icon: <Clock className="h-7 w-7 text-red-600" />,
+                    title: "Erreichbarkeit",
+                    content: "Mo-Fr: 08:00 - 18:00 Uhr",
+                    gradient: "from-purple-50 to-purple-100"
+                  }
+                ].map((item, index) => (
+                  <div key={index} className={`flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r ${item.gradient} hover:shadow-professional transition-all duration-300 group`}>
+                    <div className="p-3 bg-white rounded-xl shadow-professional group-hover:scale-110 transition-transform duration-300">
+                      {item.icon}
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-gray-900 text-lg mb-1 font-display">{item.title}</p>
+                      {item.href ? (
+                        <a href={item.href} className="text-red-600 hover:text-red-700 transition-colors duration-200 font-semibold">
+                          {item.content}
+                        </a>
+                      ) : (
+                        <p className="text-gray-700 font-medium">{item.content}</p>
+                      )}
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-6 w-6 text-red-600" />
-                  <div>
-                    <p className="font-semibold text-gray-900">E-Mail</p>
-                    <a href="mailto:info@ammanncotransport.ch" className="text-red-600 hover:text-red-700">
-                      info@ammanncotransport.ch
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="h-6 w-6 text-red-600" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Standort</p>
-                    <p className="text-gray-600">Schweiz</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Clock className="h-6 w-6 text-red-600" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Erreichbarkeit</p>
-                    <p className="text-gray-600">Mo-Fr: 08:00 - 18:00 Uhr</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
