@@ -164,14 +164,17 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <Card className="bg-red-50 border-red-200">
+            <Card className="bg-gradient-to-br from-red-50 via-red-25 to-orange-50 border-red-200 shadow-professional hover-lift">
               <CardHeader>
-                <CardTitle className="text-xl text-red-900">
+                <CardTitle className="text-2xl font-bold font-display text-red-900 tracking-tight flex items-center gap-3">
+                  <div className="p-2 bg-red-100 rounded-xl">
+                    <MessageCircle className="h-6 w-6 text-red-600" />
+                  </div>
                   Frühe Anfragen willkommen!
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-red-800">
+                <p className="text-red-800 leading-relaxed">
                   Obwohl wir uns noch im Aufbau befinden, nehmen wir gerne bereits 
                   jetzt Ihre Anfragen entgegen. So können wir Sie über unseren 
                   Betriebsstart informieren und Ihre Transportbedürfnisse von 
