@@ -283,8 +283,8 @@ const ContactSection = () => {
                   </select>
                 </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <div className="space-y-2">
+                  <label htmlFor="message" className="block text-sm font-bold text-gray-700 tracking-wide">
                     Nachricht *
                   </label>
                   <Textarea
@@ -293,8 +293,9 @@ const ContactSection = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    rows={4}
+                    rows={5}
                     placeholder="Beschreiben Sie Ihre Transportanforderungen oder Fragen..."
+                    className="border-2 border-gray-200 focus:border-red-500 focus:ring-red-500 rounded-xl text-lg p-4 resize-none"
                   />
                 </div>
 
