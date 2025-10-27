@@ -301,17 +301,35 @@ const ContactSection = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white py-3"
+                  disabled={isSubmitting}
+                  className="w-full btn-professional bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 rounded-2xl font-bold text-lg tracking-wide shadow-red hover:shadow-professional-lg transition-all duration-300 hover-lift disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Anfrage senden
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-3"></div>
+                      Wird gesendet...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-3 h-5 w-5" />
+                      Anfrage senden
+                    </>
+                  )}
                 </Button>
 
-                <p className="text-sm text-gray-500 text-center">
-                  * Pflichtfelder. Ihre Daten werden vertraulich behandelt.
-                </p>
+                <div className="text-center space-y-2">
+                  <p className="text-sm text-gray-500">
+                    * Pflichtfelder. Ihre Daten werden vertraulich behandelt.
+                  </p>
+                  <div className="flex items-center justify-center gap-2 text-xs text-gray-400">
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                    SSL-verschlüsselt und DSGVO-konform
+                  </div>
+                </div>
               </form>
             </CardContent>
           </Card>
+          </div>
         </div>
       </div>
     </section>
