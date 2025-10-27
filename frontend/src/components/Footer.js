@@ -10,36 +10,64 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-64 h-64 bg-red-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-red-400 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 relative">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <img 
-              src="https://ammanncotransport.ch/wp-content/uploads/2025/09/96.png" 
-              alt="Ammann & Co Transport Logo" 
-              className="h-8 w-auto"
-            />
-              <span className="text-2xl font-bold">Ammann & Co Transport</span>
+            <div className="flex items-center space-x-4 mb-6 group">
+              <div className="p-2 bg-white/10 rounded-xl backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300">
+                <img 
+                  src="https://ammanncotransport.ch/wp-content/uploads/2025/09/96.png" 
+                  alt="Ammann & Co Transport Logo" 
+                  className="h-10 w-auto"
+                />
+              </div>
+              <div>
+                <span className="text-3xl font-bold font-display tracking-tight">Ammann & Co Transport</span>
+                <div className="text-red-400 text-sm font-medium tracking-wide">Professionelle Logistiklösungen</div>
+              </div>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="text-gray-300 mb-8 max-w-lg leading-relaxed text-lg">
               Ihr zuverlässiger Partner für professionelle Transportlösungen in der Schweiz und Europa. 
-              Derzeit im Aufbau - bald für Sie da!
+              <span className="text-red-400 font-semibold"> Derzeit im Aufbau - bald für Sie da!</span>
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-red-400" />
-                <a href="tel:+41792470005" className="text-gray-300 hover:text-white">
-                  +41 79 247 00 05
-                </a>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-blue-400" />
-                <a href="mailto:info@ammanncotransport.ch" className="text-gray-300 hover:text-white">
-                  info@ammanncotransport.ch
-                </a>
-              </div>
+            <div className="space-y-4">
+              {[
+                {
+                  icon: <Phone className="h-5 w-5 text-red-400" />,
+                  content: "+41 79 247 00 05",
+                  href: "tel:+41792470005"
+                },
+                {
+                  icon: <Mail className="h-5 w-5 text-red-400" />,
+                  content: "info@ammanncotransport.ch", 
+                  href: "mailto:info@ammanncotransport.ch"
+                },
+                {
+                  icon: <MapPin className="h-5 w-5 text-red-400" />,
+                  content: "Schweiz"
+                }
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-3 group">
+                  <div className="p-2 bg-white/5 rounded-lg group-hover:bg-red-500/20 transition-colors duration-200">
+                    {item.icon}
+                  </div>
+                  {item.href ? (
+                    <a href={item.href} className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+                      {item.content}
+                    </a>
+                  ) : (
+                    <span className="text-gray-300 font-medium">{item.content}</span>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
