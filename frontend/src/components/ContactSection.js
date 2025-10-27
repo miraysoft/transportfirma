@@ -263,8 +263,8 @@ const ContactSection = () => {
                   </div>
                 </div>
 
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
+                <div className="space-y-2">
+                  <label htmlFor="service" className="block text-sm font-bold text-gray-700 tracking-wide">
                     Interessiert an
                   </label>
                   <select
@@ -272,7 +272,7 @@ const ContactSection = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                    className="w-full h-12 px-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 text-lg bg-white"
                   >
                     <option value="">Bitte wählen...</option>
                     <option value="lkw">LKW-Transport</option>
