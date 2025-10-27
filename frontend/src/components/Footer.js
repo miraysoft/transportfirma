@@ -1,5 +1,5 @@
 import React from "react";
-import { Truck, Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin, Award, Shield } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (sectionId) => {
