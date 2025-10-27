@@ -53,6 +53,7 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     try {
       const response = await axios.post(`${API}/contact`, formData);
@@ -76,6 +77,8 @@ const ContactSection = () => {
       } else {
         toast.error("Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.");
       }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
