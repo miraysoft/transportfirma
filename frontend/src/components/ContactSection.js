@@ -185,11 +185,19 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">Anfrage senden</CardTitle>
-            </CardHeader>
-            <CardContent>
+          <div className={`transition-all duration-1000 ${
+            isVisible ? 'animate-fade-in' : 'opacity-0 translate-x-10'
+          }`}>
+            <Card className="bg-white/70 backdrop-blur-xl shadow-professional-lg border border-white/50 hover-lift">
+              <CardHeader className="pb-6">
+                <CardTitle className="text-3xl font-bold font-display text-gray-900 tracking-tight flex items-center gap-3">
+                  <div className="p-3 bg-red-100 rounded-xl">
+                    <Send className="h-7 w-7 text-red-600" />
+                  </div>
+                  Anfrage senden
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
