@@ -1,82 +1,56 @@
 import React from 'react';
 import { Button } from '../ui/button';
-import { Menu, Moon, Sun, Bell, Search } from 'lucide-react';
+import { Menu, Bell, LogOut } from 'lucide-react';
 import { useAdmin } from '../../contexts/AdminContext';
-import { Input } from '../ui/input';
 
 const AdminHeader = ({ setSidebarOpen }) => {
-  const { user, darkMode, toggleDarkMode } = useAdmin();
+  const { user, logout } = useAdmin();
 
   return (
-    <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-4">
+    <header data-testid="admin-header" className="bg-white border-b border-gray-200 px-4 lg:px-6 py-4">
       <div className="flex items-center justify-between">
-        {/* Left side */}
         <div className="flex items-center gap-4">
           <Button
             variant="ghost"
             size="sm"
             className="lg:hidden p-2"
             onClick={() => setSidebarOpen(true)}
+            data-testid="admin-sidebar-toggle"
           >
             <Menu className="h-6 w-6" />
           </Button>
-          
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white font-display">
-              Willkommen zurück, {user?.full_name || user?.username}!
+            <h2 className="text-lg lg:text-xl font-bold text-gray-900">
+              Hosgeldiniz, {user?.full_name || user?.username || 'Admin'}
             </h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              {new Date().toLocaleDateString('de-DE', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
+            <p className="text-sm text-gray-500">
+              {new Date().toLocaleDateString('tr-TR', {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
               })}
             </p>
           </div>
         </div>
 
-        {/* Right side */}
-        <div className="flex items-center gap-4">
-          {/* Search */}
-          <div className="hidden md:block relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-            <Input
-              placeholder="Suchen..."
-              className="pl-10 w-64 bg-gray-50 dark:bg-gray-800 border-0 focus:ring-2 focus:ring-red-500"
-            />
+        <div className="flex items-center gap-3">
+          <Button variant="ghost" size="sm" className="relative p-2 hover:bg-gray-100 rounded-xl">
+            <Bell className="h-5 w-5 text-gray-600" />
+            <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
+          </Button>
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-gray-50 rounded-xl">
+            <div className="w-7 h-7 bg-red-100 rounded-full flex items-center justify-center">
+              <span className="text-red-600 text-sm font-semibold">{user?.username?.charAt(0).toUpperCase()}</span>
+            </div>
+            <span className="text-sm font-medium text-gray-700">{user?.username}</span>
           </div>
-
-          {/* Notifications */}
           <Button
+            data-testid="admin-logout-btn"
             variant="ghost"
             size="sm"
-            className="relative p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-xl"
+            onClick={logout}
+            className="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-xl"
           >
-            <Bell className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-            <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+            <LogOut className="h-5 w-5" />
           </Button>
-
-          {/* Dark mode toggle */}
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleDarkMode}
-            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-xl"
-          >
-            {darkMode ? (
-              <Sun className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-            ) : (
-              <Moon className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-            )}
-          </Button>
-
-          {/* User avatar */}
-          <div className="w-10 h-10 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center">
-            <span className="text-red-600 dark:text-red-400 font-semibold">
-              {user?.username?.charAt(0).toUpperCase()}
-            </span>
-          </div>
         </div>
       </div>
     </header>
